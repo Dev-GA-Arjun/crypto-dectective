@@ -84,3 +84,9 @@ Status: confirmed
 Why: the client and server need a shared reference for API integration, including evidence citations and verified versus inferred certainty.
 Alternatives rejected: undocumented response shapes or a generic envelope that obscures route-specific data.
 Impact: `server/seed/demo-case.json` records one response shape for every route in `docs/ARCHITECTURE.md`; implementation changes must update both files.
+
+## D-013 | Phase 1 | Confirm Ethereum with optional Etherscan
+Status: confirmed
+Why: the project scope already selects Ethereum for a single-chain MVP, while the seeded demo keeps development and presentation independent of network access and API keys.
+Alternatives rejected: expanding to Tron or multiple chains, or making live Etherscan access a requirement.
+Impact: confirms the proposal in D-004. Ethereum is the only supported chain; Etherscan is an optional enhancement when configured, and all demo flows must remain available from local seed data.

@@ -10,7 +10,7 @@ Current phase: 1
 - [x] 1.3 Build the seeded demo case: `demo-chat.txt` (realistic pig-butchering style chat, 25 to 40 messages with timestamps), `demo-txs.json` (8 to 15 transactions across 5 to 8 wallets ending at an exchange deposit address), `exchange-labels.json`
 - [x] 1.4 `npm run seed` loads the demo case into MongoDB
 - [x] 1.5 Write `server/seed/demo-case.json` with sample response shapes for every API route
-- [ ] 1.6 Confirm or revise D-004 (chain choice) in DECISIONS.md
+- [x] 1.6 Confirm or revise D-004 (chain choice) in DECISIONS.md
 Done when: server and client run, seed loads, health route works, commit made.
 
 ## Phase 2: Evidence extraction (60 min)
