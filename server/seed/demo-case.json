@@ -1,0 +1,308 @@
+{
+  "notice": "Shape examples only. All example case data is fictional and synthetic; none of the addresses, hashes, amounts, transactions, or exchange labels are real-world verified records.",
+  "caseId": "670000000000000000000001",
+  "responses": {
+    "GET /health": {
+      "status": "ok",
+      "database": "connected"
+    },
+    "POST /cases": {
+      "_id": "670000000000000000000001",
+      "title": "Synthetic demo case: Northstar wallet trace",
+      "victimName": "Maya",
+      "status": "open",
+      "createdAt": "2026-10-15T06:00:00.000Z"
+    },
+    "GET /cases": {
+      "cases": [
+        {
+          "_id": "670000000000000000000001",
+          "title": "Synthetic demo case: Northstar wallet trace",
+          "victimName": "Maya",
+          "status": "open",
+          "evidenceSummary": {
+            "total": 12,
+            "chat": 1,
+            "report": 0,
+            "txhash": 10,
+            "address": 0,
+            "file": 1
+          }
+        }
+      ]
+    },
+    "GET /cases/:id": {
+      "case": {
+        "_id": "670000000000000000000001",
+        "title": "Synthetic demo case: Northstar wallet trace",
+        "victimName": "Maya",
+        "status": "open",
+        "createdAt": "2026-10-15T06:00:00.000Z"
+      },
+      "evidenceSummary": {
+        "total": 12,
+        "chat": 1,
+        "report": 0,
+        "txhash": 10,
+        "address": 0,
+        "file": 1
+      }
+    },
+    "POST /cases/:id/evidence": {
+      "evidence": {
+        "_id": "synthetic-evidence-chat",
+        "caseId": "670000000000000000000001",
+        "type": "chat",
+        "source": "demo-chat.txt - synthetic scenario",
+        "createdAt": "2026-10-15T06:00:00.000Z"
+      }
+    },
+    "POST /cases/:id/extract": {
+      "caseId": "670000000000000000000001",
+      "entities": [
+        {
+          "_id": "synthetic-entity-victim-wallet",
+          "kind": "wallet",
+          "value": "0x1111111111111111111111111111111111111111",
+          "labelStatus": "verified",
+          "evidenceRefs": [
+            {
+              "type": "evidence",
+              "id": "synthetic-evidence-chat",
+              "excerpt": "I sent 2 ETH from my wallet at 09:42."
+            }
+          ]
+        }
+      ],
+      "chatEvents": [
+        {
+          "_id": "synthetic-chat-message-17",
+          "timestamp": "2026-10-03T09:47:00.000Z",
+          "summary": "Maya reports sending 2 ETH.",
+          "status": "verified",
+          "evidenceRefs": [
+            {
+              "type": "chat",
+              "id": "synthetic-chat-message-17"
+            }
+          ]
+        }
+      ]
+    },
+    "POST /cases/:id/trace": {
+      "caseId": "670000000000000000000001",
+      "edges": [
+        {
+          "_id": "synthetic-edge-01",
+          "from": "0x1111111111111111111111111111111111111111",
+          "to": "0x2222222222222222222222222222222222222222",
+          "amount": "2",
+          "asset": "ETH",
+          "timestamp": "2026-10-03T09:42:00.000Z",
+          "txHash": "0x0000000000000000000000000000000000000000000000000000000000000001",
+          "status": "verified",
+          "evidenceRefs": [
+            {
+              "type": "tx",
+              "id": "0x0000000000000000000000000000000000000000000000000000000000000001"
+            }
+          ]
+        }
+      ]
+    },
+    "GET /cases/:id/graph": {
+      "caseId": "670000000000000000000001",
+      "nodes": [
+        {
+          "id": "0x1111111111111111111111111111111111111111",
+          "kind": "wallet",
+          "label": "Victim wallet",
+          "labelStatus": "verified"
+        },
+        {
+          "id": "0x2222222222222222222222222222222222222222",
+          "kind": "wallet",
+          "label": "Unknown",
+          "labelStatus": "verified"
+        },
+        {
+          "id": "0x6666666666666666666666666666666666666666",
+          "kind": "exchange",
+          "label": "Example Exchange deposit (fictional demo endpoint)",
+          "labelStatus": "inferred",
+          "confidence": 0,
+          "reason": "The fixture explicitly marks this fictional exchange label as unverified."
+        }
+      ],
+      "edges": [
+        {
+          "_id": "synthetic-edge-01",
+          "from": "0x1111111111111111111111111111111111111111",
+          "to": "0x2222222222222222222222222222222222222222",
+          "amount": "2",
+          "asset": "ETH",
+          "timestamp": "2026-10-03T09:42:00.000Z",
+          "txHash": "0x0000000000000000000000000000000000000000000000000000000000000001",
+          "status": "verified",
+          "evidenceRefs": [
+            {
+              "type": "tx",
+              "id": "0x0000000000000000000000000000000000000000000000000000000000000001"
+            }
+          ]
+        }
+      ],
+      "suspiciousPath": [
+        "synthetic-edge-01"
+      ]
+    },
+    "GET /cases/:id/timeline": {
+      "caseId": "670000000000000000000001",
+      "events": [
+        {
+          "_id": "synthetic-edge-01",
+          "timestamp": "2026-10-03T09:42:00.000Z",
+          "kind": "tx",
+          "summary": "2 ETH transferred to 0x2222222222222222222222222222222222222222.",
+          "status": "verified",
+          "evidenceRefs": [
+            {
+              "type": "tx",
+              "id": "0x0000000000000000000000000000000000000000000000000000000000000001"
+            }
+          ]
+        },
+        {
+          "_id": "synthetic-chat-message-17",
+          "timestamp": "2026-10-03T09:47:00.000Z",
+          "kind": "chat",
+          "summary": "Maya reports sending 2 ETH.",
+          "status": "verified",
+          "evidenceRefs": [
+            {
+              "type": "chat",
+              "id": "synthetic-chat-message-17"
+            }
+          ]
+        }
+      ]
+    },
+    "GET /cases/:id/findings": {
+      "caseId": "670000000000000000000001",
+      "findings": [
+        {
+          "_id": "synthetic-finding-01",
+          "title": "Additional deposit requested before withdrawal",
+          "description": "The synthetic chat records a request for another 1.5 ETH after Maya asked to withdraw.",
+          "status": "verified",
+          "evidenceRefs": [
+            {
+              "type": "chat",
+              "id": "synthetic-chat-message-26",
+              "excerpt": "It is asking me to add another 1.5 ETH for verification."
+            }
+          ]
+        }
+      ]
+    },
+    "GET /cases/:id/freeze-clock": {
+      "caseId": "670000000000000000000001",
+      "endpoints": [
+        {
+          "address": "0x6666666666666666666666666666666666666666",
+          "label": "Example Exchange deposit (fictional demo endpoint)",
+          "status": "inferred",
+          "confidence": 0,
+          "reason": "The fixture explicitly marks this fictional exchange label as unverified.",
+          "arrivedAt": "2026-10-08T09:24:00.000Z",
+          "hoursElapsed": 168,
+          "urgency": "HIGH",
+          "urgencyIsHeuristic": true
+        }
+      ]
+    },
+    "POST /cases/:id/chat": {
+      "answer": "In the synthetic records, the second 1.5 ETH transfer flows through intermediate wallets to the fictional example deposit address. The address is not verified as a real exchange.",
+      "claims": [
+        {
+          "text": "The second synthetic transfer reaches the example deposit address.",
+          "status": "verified",
+          "evidenceRefs": [
+            {
+              "type": "tx",
+              "id": "0x0000000000000000000000000000000000000000000000000000000000000007"
+            },
+            {
+              "type": "tx",
+              "id": "0x0000000000000000000000000000000000000000000000000000000000000008"
+            },
+            {
+              "type": "tx",
+              "id": "0x0000000000000000000000000000000000000000000000000000000000000009"
+            },
+            {
+              "type": "tx",
+              "id": "0x000000000000000000000000000000000000000000000000000000000000000a"
+            }
+          ]
+        },
+        {
+          "text": "The destination belongs to an exchange.",
+          "status": "inferred",
+          "confidence": 0,
+          "reason": "The exchange label is explicitly fictional and unverified.",
+          "evidenceRefs": [
+            {
+              "type": "evidence",
+              "id": "synthetic-evidence-fixture-notice"
+            }
+          ]
+        }
+      ],
+      "citations": [
+        {
+          "type": "tx",
+          "id": "0x0000000000000000000000000000000000000000000000000000000000000007",
+          "excerpt": "Synthetic demo transaction from Maya's wallet."
+        },
+        {
+          "type": "tx",
+          "id": "0x0000000000000000000000000000000000000000000000000000000000000008",
+          "excerpt": "Synthetic demo transaction to an intermediate wallet."
+        },
+        {
+          "type": "tx",
+          "id": "0x0000000000000000000000000000000000000000000000000000000000000009",
+          "excerpt": "Synthetic demo transaction to a consolidating wallet."
+        },
+        {
+          "type": "tx",
+          "id": "0x000000000000000000000000000000000000000000000000000000000000000a",
+          "excerpt": "Synthetic demo transaction to the fictional example deposit address."
+        }
+      ]
+    },
+    "POST /cases/:id/report": {
+      "report": {
+        "_id": "synthetic-report-01",
+        "caseId": "670000000000000000000001",
+        "summary": "Synthetic demo scenario: chat and fictional transfer records are available for review.",
+        "findings": [
+          {
+            "title": "Additional deposit requested before withdrawal",
+            "description": "The synthetic chat records a request for another 1.5 ETH after Maya asked to withdraw.",
+            "status": "verified",
+            "evidenceRefs": [
+              {
+                "type": "chat",
+                "id": "synthetic-chat-message-26"
+              }
+            ]
+          }
+        ],
+        "freezeRequestDraft": "DRAFT FOR INVESTIGATOR REVIEW ONLY. Replace all fictional demo data with independently verified case evidence before use.",
+        "generatedAt": "2026-10-15T06:00:00.000Z"
+      }
+    }
+  }
+}

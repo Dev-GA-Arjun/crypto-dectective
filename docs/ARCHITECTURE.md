@@ -57,7 +57,7 @@
 | POST | /cases/:id/chat | question in, answer plus citations out |
 | POST | /cases/:id/report | generate summary and freeze request draft |
 
-Response shapes live in `server/seed/demo-case.json`. If a shape changes, log a decision and update this file.
+Response shapes for every API route live in `server/seed/demo-case.json`. These are shape examples only and explicitly marked as synthetic. If a shape changes, log a decision and update this file.
 
 ## Freeze urgency rule (initial, tunable, log changes)
 - LOW: under 12 hours since funds reached the endpoint

@@ -78,3 +78,9 @@ Status: confirmed
 Why: `npm run seed` must be repeatable without duplicating demo records or altering unrelated case data.
 Alternatives rejected: inserting a new case on every run or clearing the whole local database.
 Impact: the seed script uses a stable ID for its synthetic case, upserts its records, and removes stale evidence and transactions only within that case.
+
+## D-012 | Phase 1 | Define route-specific JSON response contracts
+Status: confirmed
+Why: the client and server need a shared reference for API integration, including evidence citations and verified versus inferred certainty.
+Alternatives rejected: undocumented response shapes or a generic envelope that obscures route-specific data.
+Impact: `server/seed/demo-case.json` records one response shape for every route in `docs/ARCHITECTURE.md`; implementation changes must update both files.
