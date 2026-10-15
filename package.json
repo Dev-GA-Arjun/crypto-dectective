@@ -1,0 +1,18 @@
+{
+  "name": "traceledger",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n server,client \"npm run dev --workspace=@traceledger/server\" \"npm run dev --workspace=@traceledger/client\"",
+    "dev:server": "npm run dev --workspace=@traceledger/server",
+    "dev:client": "npm run dev --workspace=@traceledger/client",
+    "build": "npm run build --workspace=@traceledger/client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

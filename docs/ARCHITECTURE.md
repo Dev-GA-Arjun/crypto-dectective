@@ -5,6 +5,7 @@
 - Client: React + Vite, a graph library (React Flow or Cytoscape.js, see DECISIONS), a timeline component built by hand
 - LLM: used for evidence extraction and the investigator chat. Provider set in `.env` (`LLM_PROVIDER`, `LLM_API_KEY`). Must return JSON for extraction.
 - Chain data: Etherscan API (Ethereum). Cached. Seed file used as fallback.
+- Package manager: npm workspaces, with a workspace for each app.
 
 ## Folder structure
 ```
@@ -38,6 +39,7 @@
 ## API contract (all JSON, prefix /api)
 | Method | Route | Purpose |
 |---|---|---|
+| GET | /health | Check API and MongoDB connection status |
 | POST | /cases | create case (or load seeded demo) |
 | GET | /cases | list cases |
 | GET | /cases/:id | case with evidence summary |
@@ -66,6 +68,8 @@ A wallet is labelled an exchange endpoint only if it matches the local label lis
 Tool calling over case data only. Tools: `get_transactions(wallet)`, `get_edges()`, `find_chat_mentions(query)`, `get_timeline()`, `get_freeze_clock()`. The system prompt forbids claims without a citation. Output format: answer text plus `citations[]` plus `status` per claim.
 
 ## Run
-- `npm run dev` in `/server` (port 5000) and `/client` (port 5173)
+- `npm install` at the repository root
+- `npm run dev` at the repository root starts `/server` (port 5000) and `/client` (port 5173)
+- `npm run dev` in `/server` or `/client` starts that app individually
 - `npm run seed` loads the demo case
 - `.env.example` lists all variables (MONGODB_URI, ETHERSCAN_API_KEY, LLM_PROVIDER, LLM_API_KEY)

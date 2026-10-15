@@ -54,3 +54,9 @@ Alternatives rejected: cross-chain tracing, ML wallet classification.
 Impact: Phase 6 scope. Detectors and contradiction check are stretch only.
 
 <!-- New decisions go below. Next number: D-008 -->
+
+## D-008 | Phase 1 | Local MongoDB and environment-driven integrations
+Status: confirmed
+Why: development and the offline demo use a local MongoDB instance; external provider credentials are not needed to scaffold Phase 1.
+Alternatives rejected: requiring hosted MongoDB or committing real provider credentials.
+Impact: MongoDB defaults to `mongodb://127.0.0.1:27017/traceledger`; `.env.example` contains placeholders for MongoDB, Etherscan, and LLM configuration. LLM integrations select their provider through `LLM_PROVIDER` and credential through `LLM_API_KEY`, so no provider is hard-coded.
