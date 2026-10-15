@@ -36,6 +36,10 @@
 
 `evidenceRefs` item shape: `{ type: "chat" | "tx" | "evidence", id: string, excerpt?: string }`
 
+- Entity, Edge, TimelineEvent, and Report finding schemas require at least one `evidenceRefs` item.
+- An inferred Edge, TimelineEvent, or Report finding requires `confidence` (0 to 1) and a one-line `reason`.
+- Transaction `status` is the chain execution state: `success`, `failed`, or `pending`.
+
 ## API contract (all JSON, prefix /api)
 | Method | Route | Purpose |
 |---|---|---|

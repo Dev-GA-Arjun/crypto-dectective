@@ -60,3 +60,9 @@ Status: confirmed
 Why: development and the offline demo use a local MongoDB instance; external provider credentials are not needed to scaffold Phase 1.
 Alternatives rejected: requiring hosted MongoDB or committing real provider credentials.
 Impact: MongoDB defaults to `mongodb://127.0.0.1:27017/traceledger`; `.env.example` contains placeholders for MongoDB, Etherscan, and LLM configuration. LLM integrations select their provider through `LLM_PROVIDER` and credential through `LLM_API_KEY`, so no provider is hard-coded.
+
+## D-009 | Phase 1 | Validate evidence and certainty in models
+Status: confirmed
+Why: investigators must be able to trace stored entities, graph edges, timeline events, and findings to evidence, and inferred claims must not be mistaken for verified facts.
+Alternatives rejected: accepting incomplete references or permitting inferred records without confidence and a reason.
+Impact: Entity, Edge, TimelineEvent, and Report finding schemas require at least one evidence reference. Edge, TimelineEvent, and Report finding schemas require confidence from 0 to 1 and a reason when status is inferred. Transaction status represents chain execution state (`success`, `failed`, or `pending`).
