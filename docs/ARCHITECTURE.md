@@ -75,6 +75,6 @@ Tool calling over case data only. Tools: `get_transactions(wallet)`, `get_edges(
 - `npm install` at the repository root
 - `npm run dev` at the repository root starts `/server` (port 5000) and `/client` (port 5173)
 - `npm run dev` in `/server` or `/client` starts that app individually
-- `npm run seed` loads the demo case
+- `npm run seed` loads or refreshes the fixed synthetic demo case in local MongoDB; it does not call external APIs
 - `.env.example` lists all variables (MONGODB_URI, ETHERSCAN_API_KEY, LLM_PROVIDER, LLM_API_KEY)
 - `demo-txs.json` and `exchange-labels.json` identify their records as a synthetic demo fixture; the fictional endpoint must not be described as a real verified exchange.

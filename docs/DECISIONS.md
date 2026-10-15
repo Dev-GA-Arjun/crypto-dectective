@@ -72,3 +72,9 @@ Status: confirmed
 Why: Phase 1 requires a complete offline case, but fabricated transactions or exchange attributions must not be presented as real verified blockchain evidence.
 Alternatives rejected: unlabeled synthetic records or using an unverified real-world exchange label.
 Impact: demo transactions, wallets, hashes, amounts, timestamps, blocks, and the example deposit endpoint are explicitly marked fictional. Seed consumers must preserve that notice and must not treat the example exchange label as verified against a real exchange.
+
+## D-011 | Phase 1 | Idempotently refresh only the synthetic demo case
+Status: confirmed
+Why: `npm run seed` must be repeatable without duplicating demo records or altering unrelated case data.
+Alternatives rejected: inserting a new case on every run or clearing the whole local database.
+Impact: the seed script uses a stable ID for its synthetic case, upserts its records, and removes stale evidence and transactions only within that case.

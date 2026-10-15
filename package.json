@@ -10,7 +10,8 @@
     "dev": "concurrently -k -n server,client \"npm run dev --workspace=@traceledger/server\" \"npm run dev --workspace=@traceledger/client\"",
     "dev:server": "npm run dev --workspace=@traceledger/server",
     "dev:client": "npm run dev --workspace=@traceledger/client",
-    "build": "npm run build --workspace=@traceledger/client"
+    "build": "npm run build --workspace=@traceledger/client",
+    "seed": "npm run seed --workspace=@traceledger/server"
   },
   "devDependencies": {
     "concurrently": "^9.1.2"
