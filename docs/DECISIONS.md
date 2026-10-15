@@ -66,3 +66,9 @@ Status: confirmed
 Why: investigators must be able to trace stored entities, graph edges, timeline events, and findings to evidence, and inferred claims must not be mistaken for verified facts.
 Alternatives rejected: accepting incomplete references or permitting inferred records without confidence and a reason.
 Impact: Entity, Edge, TimelineEvent, and Report finding schemas require at least one evidence reference. Edge, TimelineEvent, and Report finding schemas require confidence from 0 to 1 and a reason when status is inferred. Transaction status represents chain execution state (`success`, `failed`, or `pending`).
+
+## D-010 | Phase 1 | Mark seeded blockchain scenario as synthetic
+Status: confirmed
+Why: Phase 1 requires a complete offline case, but fabricated transactions or exchange attributions must not be presented as real verified blockchain evidence.
+Alternatives rejected: unlabeled synthetic records or using an unverified real-world exchange label.
+Impact: demo transactions, wallets, hashes, amounts, timestamps, blocks, and the example deposit endpoint are explicitly marked fictional. Seed consumers must preserve that notice and must not treat the example exchange label as verified against a real exchange.

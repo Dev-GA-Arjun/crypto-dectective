@@ -1,0 +1,12 @@
+{
+  "datasetType": "synthetic-demo-fixture",
+  "notice": "This label is fictional and is not evidence that any real address belongs to an exchange.",
+  "labels": [
+    {
+      "address": "0x6666666666666666666666666666666666666666",
+      "label": "Example Exchange deposit (fictional demo endpoint)",
+      "source": "Synthetic offline demo scenario",
+      "verified": false
+    }
+  ]
+}

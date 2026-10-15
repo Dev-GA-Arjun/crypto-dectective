@@ -1,0 +1,32 @@
+2026-09-28 09:10 - Daniel: Hi Maya, this is Daniel from the Northstar investment group. Priya said you were looking for a steadier way to grow your savings.
+2026-09-28 09:18 - Maya: I am, but I have never used crypto for investing.
+2026-09-28 09:20 - Daniel: That is completely fine. I can walk you through the dashboard and you can start small.
+2026-09-28 09:34 - Maya: Is Northstar a regulated investment firm?
+2026-09-28 09:41 - Daniel: We are a private research group, not a bank or broker. The dashboard is just where members see their balances.
+2026-09-29 10:05 - Maya: I signed up. The returns on the screen look unusually high.
+2026-09-29 10:12 - Daniel: The number is a projection, not a guarantee. The first practice portfolio has been performing well this quarter.
+2026-09-29 10:27 - Maya: It says I need to connect a wallet. Is that safe?
+2026-09-29 10:32 - Daniel: You keep control of your wallet. Never send me your recovery phrase or password.
+2026-09-30 08:50 - Maya: The dashboard says I need to deposit before I can see the strategy.
+2026-09-30 09:03 - Daniel: You can watch the free lessons first. If you decide to try it, use only money you can afford to risk.
+2026-10-01 11:16 - Maya: I watched them. The first suggested amount is 2 ETH, which is more than I expected.
+2026-10-01 11:24 - Daniel: You do not have to do it. The amount is your choice; I can show you how a transfer works without taking custody of your wallet.
+2026-10-02 14:02 - Maya: I made a new wallet for this. I do not want to use my savings wallet.
+2026-10-02 14:10 - Daniel: That is a sensible precaution. Check every address on your own screen before approving a transfer.
+2026-10-03 09:25 - Maya: The dashboard gave me this deposit address: 0x2222222222222222222222222222222222222222. Is this the one you expected?
+2026-10-03 09:32 - Daniel: Yes, that is the address shown in the practice instructions. Please confirm the network and amount before sending.
+2026-10-03 09:47 - Maya: I sent 2 ETH from my wallet at 09:42. The transaction is still pending.
+2026-10-03 09:51 - Daniel: I see the transfer in the group dashboard now. Wait for a few confirmations before refreshing.
+2026-10-03 10:18 - Maya: It now says my balance is 2.31 ETH. That happened very quickly.
+2026-10-03 10:23 - Daniel: That is a simulated estimate while the strategy is open. It is not a withdrawal amount or a guaranteed profit.
+2026-10-04 16:06 - Maya: Can I withdraw the original 2 ETH now?
+2026-10-04 16:12 - Daniel: The account page says withdrawals are reviewed at the end of the cycle. I cannot override that.
+2026-10-05 08:55 - Maya: I would rather stop. Can you tell me how to get the deposit back?
+2026-10-05 09:08 - Daniel: I understand. The dashboard requires a verification step before it will show the withdrawal option.
+2026-10-06 12:40 - Maya: It is asking me to add another 1.5 ETH for verification. I am not comfortable with that.
+2026-10-06 12:47 - Daniel: Do not send anything if you are uncomfortable. I can ask support to explain the request in writing.
+2026-10-07 13:10 - Maya: Support repeated the request but did not explain why the fee cannot come out of my balance.
+2026-10-07 13:22 - Daniel: I do not know their internal rule. Take time to decide and do not share your recovery phrase with anyone.
+2026-10-08 10:03 - Maya: I am not sending the verification amount. I am saving the messages and asking my bank what to do.
+2026-10-08 10:16 - Daniel: Understood. Keep the transaction records and do not send more until you have independent advice.
+2026-10-09 08:30 - Maya: I sent 1.5 ETH yesterday before I saw your last message. The dashboard still will not let me withdraw.

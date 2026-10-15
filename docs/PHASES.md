@@ -7,7 +7,7 @@ Current phase: 1
 ## Phase 1: Setup, data model, seeded demo case (45 min)
 - [x] 1.1 Init repo, `/server` (Express + Mongoose) and `/client` (Vite + React), `.env.example`, health route
 - [x] 1.2 Create Mongoose models per ARCHITECTURE.md
-- [ ] 1.3 Build the seeded demo case: `demo-chat.txt` (realistic pig-butchering style chat, 25 to 40 messages with timestamps), `demo-txs.json` (8 to 15 transactions across 5 to 8 wallets ending at an exchange deposit address), `exchange-labels.json`
+- [x] 1.3 Build the seeded demo case: `demo-chat.txt` (realistic pig-butchering style chat, 25 to 40 messages with timestamps), `demo-txs.json` (8 to 15 transactions across 5 to 8 wallets ending at an exchange deposit address), `exchange-labels.json`
 - [ ] 1.4 `npm run seed` loads the demo case into MongoDB
 - [ ] 1.5 Write `server/seed/demo-case.json` with sample response shapes for every API route
 - [ ] 1.6 Confirm or revise D-004 (chain choice) in DECISIONS.md

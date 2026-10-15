@@ -15,7 +15,7 @@
     /routes        cases, evidence, trace, graph, timeline, chat, report
     /services      extractor, tracer, correlator, detectors, freezeClock, reporter, chatAgent
     /lib           etherscanClient, llmClient, cache
-  /seed            demo-case.json, demo-chat.txt, demo-txs.json
+  /seed            demo-case.json, demo-chat.txt, demo-txs.json, exchange-labels.json
 /client
   /src
     /pages         CaseList, CaseView
@@ -77,3 +77,4 @@ Tool calling over case data only. Tools: `get_transactions(wallet)`, `get_edges(
 - `npm run dev` in `/server` or `/client` starts that app individually
 - `npm run seed` loads the demo case
 - `.env.example` lists all variables (MONGODB_URI, ETHERSCAN_API_KEY, LLM_PROVIDER, LLM_API_KEY)
+- `demo-txs.json` and `exchange-labels.json` identify their records as a synthetic demo fixture; the fictional endpoint must not be described as a real verified exchange.
